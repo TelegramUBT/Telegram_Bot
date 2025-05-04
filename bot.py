@@ -92,4 +92,4 @@ def handle_callback(call):
     elif data == "back_to_main":
         send_main_menu(call.message.chat.id)
 
-bot.polling()
+bot.polling(none_stop=True, interval=0, timeout=20)
