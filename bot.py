@@ -123,7 +123,7 @@ def handle_callback(call):
 
         if file_id:
             file_io = download_file_from_drive(file_id)
-            input_file = InputFile(file_io, file_name=f"{topic}.pdf")
+            input_file = InputFile(file_io, f"{topic}.pdf")
 
 
             bot.send_document(call.message.chat.id, input_file, caption=f"📄 <b>{topic}</b> материалы:", parse_mode="HTML")
